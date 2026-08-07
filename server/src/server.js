@@ -3,8 +3,6 @@ import http from 'http';
 import mongoose from 'mongoose';
 import app from './app.js';
 import logger from './utils/logger.js';
-import { connectDB } from './config/db.js';
-import { connectRedis, default as redisClient } from './config/redis.js';
 import { connection as bullConnection } from './queue/documentQueue.js';
 
 // ---------------------------------------------------------------------------
@@ -12,11 +10,6 @@ import { connection as bullConnection } from './queue/documentQueue.js';
 // ---------------------------------------------------------------------------
 const start = async () => {
   try {
-    // MongoDB
-    await connectDB();
-
-    // Redis (same helper used in app.js)
-    await connectRedis();
 
     // -----------------------------------------------------------------------
     // HTTP server
