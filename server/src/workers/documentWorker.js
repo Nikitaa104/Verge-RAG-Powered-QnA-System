@@ -11,11 +11,7 @@ import Chunk from '../models/Chunk.js';
 import { connectDB } from '../config/db.js';
 
 dotenv.config({ path: path.resolve(process.cwd(), '.env') });
-connectDB();
 
-const connection = new IORedis(process.env.REDIS_URL, {
-  maxRetriesPerRequest: null,
-});
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 

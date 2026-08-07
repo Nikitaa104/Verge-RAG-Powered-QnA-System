@@ -10,8 +10,14 @@ import conversationRoutes from './routes/conversationRoutes.js';
 import { connectRedis } from "./config/redis.js";
 import { connectDB } from './config/db.js';
 
-await connectDB();
-await connectRedis();
+/**
+ * Initialize essential services before the server starts.
+ * This function is called from `src/server.js`.
+ */
+export async function init() {
+  await connectDB();
+  await connectRedis();
+}
 
 // Initialize express application
 const app = express();
