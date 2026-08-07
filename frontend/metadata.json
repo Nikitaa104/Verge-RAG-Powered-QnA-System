@@ -1,0 +1,6 @@
+{
+  "name": "Verge",
+  "description": "AI-powered RAG document intelligence platform where users upload PDFs and chat with them using natural language.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
