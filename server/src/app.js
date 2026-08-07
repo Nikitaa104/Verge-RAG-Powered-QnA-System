@@ -8,6 +8,7 @@ import chatRoutes from './routes/chatRoutes.js';
 import jobRoutes from './routes/jobRoutes.js';
 import conversationRoutes from './routes/conversationRoutes.js';
 import { connectRedis } from "./config/redis.js";
+import { connectDB } from './config/db.js';
 
 await connectDB();
 await connectRedis();
