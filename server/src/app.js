@@ -9,6 +9,7 @@ import jobRoutes from './routes/jobRoutes.js';
 import conversationRoutes from './routes/conversationRoutes.js';
 import { connectRedis } from "./config/redis.js";
 
+await connectDB();
 await connectRedis();
 
 // Initialize express application
